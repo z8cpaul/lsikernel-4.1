@@ -55,6 +55,7 @@ ENTRY(cpu_cache_off)
 	ret
 ENDPROC(cpu_cache_off)
 
+#ifdef CHARLIE_CHANGE
 /*
  *	cpu_reset(loc)
  *
@@ -87,7 +88,7 @@ ENTRY(cpu_soft_restart)
 	mov	x0, x20
 	ret	x19
 ENDPROC(cpu_soft_restart)
-
+#endif
 /*
  *	cpu_do_idle()
  *
